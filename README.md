@@ -1,4 +1,4 @@
-# sys_zarz_pro_pro
+# System zarządzania zespołem programistycznych
 Projekt z baz danych - semestr 4
 
 Temat projektu:
