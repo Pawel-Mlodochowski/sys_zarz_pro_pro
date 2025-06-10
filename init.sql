@@ -1,3 +1,7 @@
+CREATE SCHEMA IF NOT EXISTS sys_zarz_pro_pro;
+
+SET search_path TO sys_zarz_pro_pro;
+
 DROP TABLE IF EXISTS czas_pracy CASCADE;
 DROP TABLE IF EXISTS zadanie_uzytkownik CASCADE;
 DROP TABLE IF EXISTS zadanie CASCADE;

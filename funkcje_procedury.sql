@@ -28,13 +28,13 @@ CREATE OR REPLACE PROCEDURE assign_task_to_user(
 LANGUAGE plpgsql
 AS $$
 BEGIN
-  -- Sprawdzamy, czy ju¿ nie ma takiego przypisania
+  -- Sprawdzamy, czy juï¿½ nie ma takiego przypisania
   IF EXISTS(
     SELECT 1 FROM zadanie_uzytkownik
     WHERE zadanie_zadanie_id = p_task_id
       AND uzytkownik_uzytkownik_id = p_user_id
   ) THEN
-    RAISE NOTICE 'Zadanie % ju¿ przypisane do u¿ytkownika %', p_task_id, p_user_id;
+    RAISE NOTICE 'Zadanie % juï¿½ przypisane do uï¿½ytkownika %', p_task_id, p_user_id;
   ELSE
     INSERT INTO zadanie_uzytkownik
       (zadanie_zadanie_id, uzytkownik_uzytkownik_id)
@@ -45,9 +45,6 @@ END;
 $$;
 
 CALL assign_task_to_user(1, 1);
-
-
-ALTER USER Postgres WITH PASSWORD '1234';
 
 
 
